@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHN Germany — Fulfillment, das Ihr E-Commerce Wachstum vorantreibt</title>
+    <meta name="description" content="Zuverlässige Fulfillment- und Logistiklösungen für E-Commerce-Unternehmen. Wir lagern, verpacken und versenden Ihre Produkte schnell, präzise und sorgfältig." />
+    <meta name="theme-color" content="#1e1e1e" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SHN Germany — Fulfillment-Dienstleister" />
+    <meta property="og:description" content="Vom Lagerbestand bis zur Auslieferung kümmern wir uns um alles, was dazwischen liegt." />
+    <meta property="og:image" content="assets/images/hero-warehouse.jpg" />
+
+    <link rel="preload" as="image" href="assets/images/hero-warehouse.jpg" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand:   '#c90c0d',
+              ink:     '#1e1e1e',
+              body:    '#424242',
+              muted:   '#7c7c7c',
+              muted2:  '#969696',
+              muted3:  '#808080',
+              surface: '#f2f2f2',
+            },
+            fontFamily: {
+              sora:    ['Sora', 'system-ui', 'sans-serif'],
+              inter:   ['Inter', 'system-ui', 'sans-serif'],
+              manrope: ['Manrope', 'system-ui', 'sans-serif'],
+            },
+            screens: { cv: '1180px' },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-inter antialiased">
+
+    <!-- ======================================================================
+         SVG symbol sprite — defined once, referenced with <use> throughout
+         ====================================================================== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="i-star" viewBox="0 0 20 20"><path d="M16.2225 19.43L10 14.8567L3.7775 19.43L6.16667 12.0442L-0.0525003 7.5H7.62583L10 0.101666L12.3742 7.5H20.0517L13.8333 12.0442L16.2225 19.43Z" fill="#E9B300"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 19 19"><path d="M17.6146 1.3915L16.7279 0.615585C15.9204 -0.191999 14.5508 -0.231587 13.68 0.655172L12.1996 2.59496C11.3683 3.42629 11.3683 4.78019 12.1996 5.60361L13.3792 6.81498C12.0967 9.82363 9.72959 12.1989 6.81626 13.3865L5.60501 12.2068C5.20126 11.803 4.67084 11.5813 4.10084 11.5813C3.53084 11.5813 3.00043 11.803 2.63626 12.1751L0.62543 13.727C-0.205819 14.5583 -0.205819 15.9122 0.609597 16.7198L1.4171 17.6461C2.28793 18.517 3.45959 19 4.73418 19C10.8696 19 19 10.8608 19 4.73268C19 3.46588 18.5171 2.28618 17.6304 1.39942L17.6146 1.3915ZM4.71834 18.2003C3.65751 18.2003 2.68376 17.8045 1.97918 17.0998L1.17168 16.1655C0.64918 15.643 0.64918 14.7958 1.1321 14.3049L3.14293 12.7531C3.39626 12.4997 3.72876 12.3572 4.09293 12.3572C4.45709 12.3572 4.78959 12.4997 5.04293 12.7531L6.44418 14.1228C6.55501 14.2337 6.71334 14.2653 6.86376 14.2099C10.165 12.951 12.8488 10.267 14.2183 6.86249C14.2738 6.71997 14.2421 6.5537 14.1313 6.43494L12.7617 5.03355C12.2392 4.51099 12.2392 3.66382 12.7933 3.10168L14.2738 1.16189C14.7963 0.639337 15.6433 0.639337 16.1896 1.17773L17.0763 1.95364C17.7967 2.67413 18.1925 3.64798 18.1925 4.70893C18.1925 10.3779 10.3867 18.1845 4.71834 18.1845V18.2003Z" fill="currentColor"/></symbol>
+        <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M24 12C24 17.989 19.606 22.954 13.87 23.855V15.492H16.659L17.19 12.032H13.87V9.787C13.87 8.84 14.334 7.918 15.82 7.918H17.329V4.972C17.329 4.972 15.959 4.738 14.65 4.738C11.916 4.738 10.13 6.395 10.13 9.394V12.031H7.091V15.491H10.13V23.854C4.395 22.952 0 17.988 0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.372 24 12Z" fill="currentColor"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+          <path d="M20.65 18.172H20.476V17.819H20.696C20.81 17.819 20.94 17.837 20.94 17.986C20.94 18.157 20.809 18.171 20.65 18.171V18.172Z" fill="currentColor"/><path d="M20.639 17.366C20.166 17.374 19.789 17.764 19.796 18.237C19.804 18.71 20.194 19.088 20.667 19.08H20.689C21.152 19.07 21.519 18.687 21.51 18.224V18.21C21.502 17.737 21.112 17.359 20.639 17.367V17.366ZM20.949 18.744L20.664 18.295L20.66 18.29H20.476V18.744H20.327V17.701H20.725C20.971 17.701 21.092 17.796 21.092 17.995C21.092 18.001 21.092 18.007 21.092 18.013C21.091 18.16 20.997 18.279 20.803 18.279L21.111 18.744H20.951H20.949Z" fill="currentColor"/><path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM19.037 18.056C19.029 18.634 18.554 19.098 17.975 19.09H5.76C5.183 19.096 4.709 18.633 4.702 18.056V5.79C4.709 5.213 5.182 4.75 5.76 4.757H17.975C18.553 4.748 19.028 5.211 19.037 5.789V18.056ZM20.687 19.192C20.147 19.197 19.705 18.764 19.7 18.224C19.695 17.685 20.128 17.243 20.668 17.237H20.687C21.219 17.242 21.65 17.673 21.655 18.205C21.66 18.744 21.227 19.186 20.687 19.192ZM14.367 9.96C13.544 9.93 12.771 10.354 12.355 11.065H12.327V10.13H10.288V16.97H12.412V13.587C12.412 12.694 12.581 11.831 13.688 11.831C14.778 11.831 14.792 12.852 14.792 13.645V16.971H16.916V13.219C16.916 11.376 16.52 9.961 14.367 9.961V9.96ZM6.827 16.97H8.953V10.13H6.827V16.97ZM7.891 6.73C7.21 6.73 6.658 7.282 6.658 7.963C6.658 8.644 7.21 9.195 7.891 9.195C8.572 9.195 9.124 8.643 9.124 7.962C9.124 7.281 8.572 6.729 7.891 6.73Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24">
+          <path d="M14.502 11.986C14.502 13.417 13.342 14.577 11.911 14.577C10.48 14.577 9.321 13.417 9.321 11.986C9.321 10.555 10.481 9.395 11.911 9.395C13.341 9.395 14.502 10.555 14.502 11.986Z" fill="currentColor"/><path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM19.637 15.19C19.6 16.017 19.468 16.582 19.276 17.076C19.077 17.587 18.811 18.021 18.379 18.453C17.947 18.885 17.513 19.151 17.003 19.349C16.509 19.541 15.943 19.672 15.116 19.71C14.287 19.748 14.022 19.757 11.911 19.757C9.8 19.757 9.536 19.748 8.707 19.71C7.88 19.672 7.315 19.541 6.82 19.349C6.309 19.151 5.876 18.884 5.443 18.453C5.011 18.021 4.745 17.587 4.546 17.076C4.354 16.582 4.223 16.017 4.185 15.19C4.147 14.361 4.138 14.096 4.138 11.985C4.138 9.874 4.147 9.61 4.185 8.781C4.223 7.954 4.354 7.389 4.546 6.894C4.745 6.383 5.011 5.95 5.443 5.518C5.875 5.086 6.309 4.82 6.82 4.621C7.314 4.429 7.88 4.298 8.707 4.26C9.536 4.222 9.801 4.213 11.911 4.213C14.021 4.213 14.287 4.222 15.116 4.26C15.943 4.297 16.508 4.429 17.003 4.621C17.514 4.819 17.947 5.086 18.379 5.518C18.811 5.95 19.077 6.384 19.276 6.894C19.468 7.388 19.599 7.954 19.637 8.781C19.675 9.61 19.684 9.874 19.684 11.985C19.684 14.096 19.675 14.36 19.637 15.19ZM17.971 7.402C17.83 7.039 17.662 6.78 17.389 6.508C17.117 6.236 16.858 6.067 16.495 5.926C16.221 5.82 15.81 5.693 15.052 5.659C14.232 5.621 13.986 5.614 11.911 5.614C9.836 5.614 9.59 5.622 8.77 5.659C8.013 5.693 7.601 5.82 7.327 5.926C6.964 6.067 6.705 6.235 6.433 6.508C6.161 6.78 5.992 7.039 5.851 7.402C5.745 7.676 5.618 8.087 5.584 8.845C5.546 9.664 5.539 9.91 5.539 11.986C5.539 14.062 5.547 14.307 5.584 15.127C5.619 15.884 5.745 16.296 5.851 16.57C5.992 16.933 6.16 17.192 6.433 17.464C6.705 17.736 6.964 17.904 7.327 18.045C7.601 18.152 8.012 18.278 8.77 18.313C9.589 18.351 9.835 18.358 11.911 18.358C13.987 18.358 14.233 18.35 15.052 18.313C15.81 18.278 16.221 18.152 16.495 18.045C16.858 17.904 17.117 17.736 17.389 17.464C17.661 17.192 17.83 16.933 17.971 16.57C18.077 16.296 18.204 15.885 18.238 15.127C18.276 14.307 18.284 14.061 18.284 11.986C18.284 9.911 18.276 9.665 18.238 8.845C18.203 8.087 18.077 7.676 17.971 7.402ZM11.912 15.976C9.708 15.976 7.921 14.189 7.921 11.985C7.921 9.781 9.708 7.994 11.912 7.994C14.116 7.994 15.903 9.781 15.903 11.985C15.903 14.189 14.116 15.976 11.912 15.976ZM16.061 8.769C15.546 8.769 15.128 8.352 15.128 7.837C15.128 7.322 15.545 6.904 16.061 6.904C16.577 6.904 16.994 7.322 16.994 7.837C16.994 8.352 16.576 8.769 16.061 8.769Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-youtube" viewBox="0 0 24 24">
+          <path d="M10.258 9.467L14.71 12L10.258 14.533V9.468V9.467Z" fill="currentColor"/><path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM20.16 16.126C19.965 16.863 19.387 17.444 18.654 17.642C17.326 18 12 18 12 18C12 18 6.674 18 5.346 17.642C4.613 17.445 4.036 16.864 3.84 16.126C3.483 14.789 3.483 12 3.483 12C3.483 12 3.483 9.211 3.84 7.874C4.035 7.137 4.613 6.556 5.346 6.359C6.674 6.001 12 6.001 12 6.001C12 6.001 17.326 6.001 18.654 6.359C19.387 6.556 19.964 7.137 20.16 7.874C20.516 9.211 20.516 12 20.516 12C20.516 12 20.516 14.789 20.16 16.126Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-jtl" viewBox="0 0 100 73">
+          <path d="M89.7648 0.00453695H10.222C4.57233 0.00453695 2.77449e-07 4.48601 2.77449e-07 10.0235V62.977C2.77449e-07 68.5144 4.57233 72.9959 10.222 72.9959H89.778C95.4277 72.9959 100 68.5144 100 62.977V10.0235C99.9965 7.36509 98.9166 4.81677 96.9975 2.93823C95.0785 1.05969 92.4771 0.00453476 89.7648 0.00453695ZM38.7466 52.9452C38.7466 57.8516 37.6954 60.9423 35.6195 62.1657C34.2005 63.0027 30.7713 63.4148 25.4106 63.4148C21.0222 63.4148 18.1448 62.7452 16.8703 61.4316C15.5958 60.1052 14.9389 57.2592 14.9389 52.9452V41.5998H25.1872V52.224C25.1872 54.5034 26.107 54.9798 26.8821 54.9798C27.5128 54.9798 28.288 54.6579 28.4457 53.0868V11.968H38.7466V52.9452ZM62.1338 20.1068H56.9833V63.2088H46.6693V20.1068H41.5189V11.968H62.1469V20.1068H62.1338ZM82.118 63.2088H65.6287V11.968H75.8639V54.7738H82.1311V63.2088H82.118Z" fill="#212D36"/><path d="M38.7465 52.9449C38.7465 57.8514 37.6954 60.9421 35.6195 62.1654C34.2005 63.0025 30.7713 63.4146 25.4106 63.4146C21.0222 63.4146 18.1448 62.7449 16.8703 61.4314C15.5958 60.105 14.9389 57.259 14.9389 52.9449V41.5996H25.1872V52.2238C25.1872 54.5032 26.1069 54.9796 26.8821 54.9796C27.5128 54.9796 28.288 54.6577 28.4457 53.0866V11.9678H38.7465V52.9449ZM62.1338 20.1066H56.9833V63.2086H46.6693V20.1066H41.5189V11.9678H62.1469V20.1066H62.1338ZM82.118 63.2086H65.6287V11.9678H75.8639V54.7736H82.1311V63.2086H82.118Z" fill="#fff"/>
+        </symbol>
+        <symbol id="i-shopware" viewBox="0 0 73 73"><path d="M72.8409 33.1277C72.829 32.9884 72.7622 32.8595 72.6554 32.7694C65.0415 26.4488 58.8803 23.8692 51.3926 23.8692C47.3998 23.8692 44.3359 24.6716 42.2932 26.2499C40.5223 27.6162 39.5873 29.5264 39.5873 31.7614C39.5873 38.0287 47.2474 40.8873 56.1212 44.1966C60.6907 45.9012 65.4196 47.6653 69.757 50.0728C69.8335 50.117 69.9205 50.1399 70.0088 50.1391C70.07 50.1377 70.1305 50.1264 70.188 50.1057C70.3273 50.0528 70.4465 49.9466 70.4998 49.8009C72.1575 45.5563 73 41.0795 73 36.4967C72.9946 35.3719 72.9415 34.2479 72.8409 33.1277ZM58.2105 65.0016C55.0402 62.6139 50.3645 60.7968 45.417 58.8803C39.5277 56.5987 32.8488 54.0054 27.8352 50.0199C22.1579 45.4966 19.3925 39.7929 19.3925 32.5839C19.3925 26.1109 22.0782 20.5796 27.1587 16.5804C32.8558 12.097 41.4908 9.72269 52.122 9.72269C55.0603 9.72269 57.8656 9.90184 60.4653 10.2598C60.576 10.2758 60.6889 10.2554 60.787 10.2017C60.8851 10.1479 60.9631 10.0637 61.0091 9.96176C61.0574 9.86016 61.0712 9.74559 61.0485 9.63543C61.0258 9.52526 60.9677 9.42551 60.8832 9.3513C54.1843 3.32272 45.5228 0.00669306 36.503 0.00669306C26.7539 0.00669306 17.5881 3.80026 10.6909 10.6975C3.80026 17.5884 1.39236e-06 26.7545 1.39236e-06 36.497C1.39236e-06 46.2458 3.79357 55.4116 10.6912 62.3025C17.5817 69.193 26.7475 72.9933 36.5033 72.9933C44.3822 72.9933 51.8832 70.5195 58.2038 65.8439C58.2693 65.7956 58.3226 65.7326 58.3594 65.6601C58.3962 65.5875 58.4156 65.5073 58.4158 65.4259C58.4168 65.3441 58.3987 65.2632 58.363 65.1895C58.3273 65.1159 58.2753 65.0516 58.2105 65.0016Z" fill="#1799F7"/></symbol>
+        <symbol id="i-shopify" viewBox="0 0 68.3853 73.2881">
+          <path d="M31.541 2.37682C32.0992 2.37682 32.3784 2.64043 32.9366 2.90404C29.5871 4.22209 26.2376 7.64903 24.5629 15.0301L18.4222 16.6118C20.376 11.3396 24.2838 2.37682 31.541 2.37682ZM34.6114 5.01292C35.1696 6.59459 35.7279 8.43986 35.7279 11.3396C35.7279 11.6032 35.7279 11.6032 35.7279 11.8668L27.6333 13.9757C29.308 8.43986 32.0992 6.06736 34.6114 5.01292ZM41.8686 9.75791L38.24 10.8124C38.24 10.5487 38.24 10.2851 38.24 10.0215C38.24 7.64903 37.9608 5.80375 37.4026 4.22209C39.3565 4.74931 41.0312 7.12181 41.8686 9.75791ZM60.0116 13.9757C60.0116 13.7121 59.7325 13.4485 59.4534 13.4485C58.8951 13.4485 53.0335 12.9212 53.0335 12.9212C53.0335 12.9212 48.8467 8.96708 48.2884 8.70347C47.7302 8.17625 46.8928 8.43986 46.6137 8.43986C46.6137 8.43986 45.7763 8.70347 44.3807 9.23069C42.9851 5.54014 40.473 2.11321 36.2861 2.11321H36.007C34.8905 0.531542 33.2157 0.0043213 31.8201 0.0043213C21.7717 -0.259289 17.0266 11.6032 15.3518 17.6662C13.1188 18.1935 10.8858 18.9843 8.37372 19.7751C6.14073 20.3023 6.14073 20.5659 5.86161 22.4112C5.58248 23.7293 5.06639e-06 65.3797 5.06639e-06 65.3797L44.3807 73.2881L68.3853 68.2795C68.3853 68.2795 60.0116 14.5029 60.0116 13.9757Z" fill="#8DB849"/><path d="M59.1742 13.4485C58.8951 13.4485 53.0335 12.9213 53.0335 12.9213C53.0335 12.9213 48.8466 8.96711 48.2884 8.7035C48.0092 8.43989 48.0092 8.43989 47.7301 8.43989L44.3806 73.2881L68.3853 68.2795C68.3853 68.2795 60.0116 14.5029 60.0116 13.9757C60.0116 13.7121 59.4533 13.4485 59.1742 13.4485Z" fill="#5A863E"/><path d="M36.2861 26.1017L33.2157 34.5372C33.2157 34.5372 30.7036 33.2192 27.3541 33.2192C22.609 33.2192 22.3299 35.8553 22.3299 36.6461C22.3299 40.3366 32.9366 41.9183 32.9366 50.8811C32.9366 57.9985 28.1915 62.4799 21.7717 62.4799C14.2353 62.4799 10.3276 57.9985 10.3276 57.9985L12.2815 51.6719C12.2815 51.6719 16.1892 54.8352 19.5387 54.8352C21.7717 54.8352 22.609 53.2536 22.609 51.9355C22.609 46.9269 13.9562 46.6633 13.9562 38.4914C13.9562 31.6375 19.2596 25.0472 29.5871 25.0472C34.3322 24.7836 36.2861 26.1017 36.2861 26.1017Z" fill="#FFFFFE"/>
+        </symbol>
+        <symbol id="i-woocommerce" viewBox="0 0 122 73">
+          <path d="M11.3273 8.4422e-07H110.623C116.907 8.4422e-07 121.994 5.0933 121.994 11.3856V49.3365C121.994 55.6289 116.907 60.7222 110.623 60.7222H75.0143L79.902 72.7066L58.4067 60.7222H11.3768C5.09298 60.7222 0.00615309 55.6289 0.00615309 49.3365V11.3856C-0.0438813 5.1434 5.04247 8.4422e-07 11.3273 8.4422e-07Z" fill="#9B5C8F"/><path d="M6.95242 10.3775C7.6467 9.4337 8.68789 8.93749 10.0765 8.83825C12.6058 8.63929 14.044 9.83067 14.3909 12.4129C15.9281 22.7903 17.614 31.5789 19.3991 38.7783L30.2589 18.0735C31.251 16.1864 32.4909 15.1935 33.9786 15.0943C36.1606 14.9454 37.4991 16.3353 38.0447 19.2648C39.2846 25.8682 40.8714 31.4792 42.7556 36.2457C44.045 23.6343 46.227 14.548 49.3015 8.93749C50.0449 7.54715 51.1361 6.85198 52.5742 6.75226C53.715 6.6535 54.7562 7.00084 55.6983 7.74563C56.6403 8.49043 57.1364 9.4337 57.2355 10.5759C57.2851 11.4696 57.1364 12.2144 56.7399 12.9592C54.8057 16.5343 53.2185 22.5422 51.9295 30.8833C50.6901 38.9767 50.2436 45.2829 50.5409 49.8013C50.6405 51.0418 50.4418 52.1344 49.9462 53.0782C49.3506 54.1703 48.4585 54.7662 47.3177 54.8655C46.0283 54.9647 44.6898 54.3693 43.4003 53.0285C38.7886 48.3112 35.1189 41.2607 32.4413 31.8767C29.2177 38.232 26.8375 42.9984 25.3003 46.1761C22.3744 51.7871 19.8951 54.667 17.8123 54.8158C16.4732 54.9151 15.3329 53.7728 14.3413 51.3901C11.8124 44.8855 9.08483 32.3233 6.15949 13.704C5.96078 12.4129 6.25813 11.2706 6.95242 10.3775ZM113.519 18.1727C111.734 15.0447 109.105 13.1581 105.585 12.4129C104.642 12.2144 103.75 12.1151 102.907 12.1151C98.1464 12.1151 94.2786 14.5976 91.2536 19.563C88.6747 23.7832 87.3857 28.4504 87.3857 33.5647C87.3857 37.3879 88.1791 40.6648 89.7659 43.3959C91.551 46.5239 94.1794 48.4104 97.7 49.1552C98.642 49.3542 99.5345 49.4534 100.378 49.4534C105.188 49.4534 109.056 46.971 112.031 42.0055C114.61 37.7353 115.899 33.068 115.899 27.9542C115.949 24.0814 115.106 20.8537 113.519 18.1727ZM107.271 31.9263C106.577 35.2032 105.337 37.636 103.502 39.2745C102.064 40.5656 100.725 41.1114 99.4855 40.8633C98.2951 40.6152 97.303 39.5727 96.5596 37.636C95.964 36.0968 95.6671 34.5576 95.6671 33.1177C95.6671 31.8767 95.7662 30.6352 96.014 29.4934C96.4605 27.4575 97.3035 25.4713 98.642 23.5847C100.279 21.1514 102.014 20.159 103.799 20.5063C104.99 20.7544 105.982 21.7974 106.725 23.7336C107.32 25.2728 107.618 26.812 107.618 28.252C107.618 29.5431 107.519 30.7845 107.271 31.9263ZM82.4762 18.1727C80.6911 15.0447 78.0131 13.1581 74.5422 12.4129C73.6001 12.2144 72.7076 12.1151 71.8641 12.1151C67.1037 12.1151 63.2358 14.5976 60.2109 19.563C57.6324 23.7832 56.343 28.4504 56.343 33.5647C56.343 37.3879 57.1364 40.6648 58.7232 43.3959C60.5082 46.5239 63.1367 48.4104 66.6572 49.1552C67.5998 49.3542 68.4918 49.4534 69.3352 49.4534C74.1452 49.4534 78.0131 46.971 80.9885 42.0055C83.5674 37.7353 84.8564 33.068 84.8564 27.9542C84.8564 24.0814 84.063 20.8537 82.4762 18.1727ZM76.1785 31.9263C75.4842 35.2032 74.2443 37.636 72.4097 39.2745C70.9716 40.5656 69.6326 41.1114 68.3927 40.8633C67.2028 40.6152 66.2112 39.5727 65.4669 37.636C64.8722 36.0968 64.5748 34.5576 64.5748 33.1177C64.5748 31.8767 64.6739 30.6352 64.9217 29.4934C65.3682 27.4575 66.2112 25.4713 67.5502 23.5847C69.1866 21.1514 70.922 20.159 72.7071 20.5063C73.8974 20.7544 74.8895 21.7974 75.6329 23.7336C76.2285 25.2728 76.5254 26.812 76.5254 28.252C76.5754 29.5431 76.4263 30.7845 76.1785 31.9263Z" fill="#fff"/>
+        </symbol>
+        <symbol id="i-flow-arrows" viewBox="0 0 168.914 31.8944">
+          <path d="M7.24332 12.9291H167.707L155.131 0.353553" stroke="#1E1E1E" fill="none"/><path d="M161.671 18.9653L1.2071 18.9653L13.7826 31.5409" stroke="#1E1E1E" fill="none"/>
+        </symbol>
+      </defs>
+    </svg>
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:z-[200] focus:top-4 focus:left-4 focus:bg-brand focus:text-white focus:px-4 focus:py-2 focus:rounded">Zum Inhalt springen</a>
+
+    <!-- ======================================================================
+         HEADER
+         ====================================================================== -->
+    <header class="shn-header" id="header">
+      <div class="shn-container">
+        <div class="shn-header__bar">
+
+          <a href="#top" class="flex-none" aria-label="SHN Germany — Startseite">
+            <img src="assets/images/logo.png" alt="SHN Germany" class="h-[38px] lg:h-[52px] w-auto object-contain" width="95" height="52" />
+          </a>
+
+          <nav class="hidden cv:flex items-center gap-10" aria-label="Hauptnavigation">
+            <a href="#dienstleistungen" class="shn-nav-link">Dienstleistungen</a>
+            <a href="#ablauf"           class="shn-nav-link">So funktioniert es</a>
+            <a href="#integrationen"    class="shn-nav-link">Integrationen</a>
+            <a href="#ueber-uns"        class="shn-nav-link">Über uns</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="tel:+493012345678"
+               class="shn-btn h-10 w-[193px] hidden sm:flex font-sora text-[16px]">
+              <svg class="w-[19px] h-[19px] rotate-180 -scale-y-100" aria-hidden="true"><use href="#i-phone"/></svg>
+              <span>+49 30 1234 5678</span>
+            </a>
+            <a href="tel:+493012345678" class="shn-btn h-10 w-10 sm:hidden" aria-label="Jetzt anrufen">
+              <svg class="w-[19px] h-[19px] rotate-180 -scale-y-100" aria-hidden="true"><use href="#i-phone"/></svg>
+            </a>
+            <button type="button" id="burger" class="shn-burger cv:hidden grid place-items-center w-10 h-10 rounded-md"
+                    aria-label="Menü öffnen" aria-expanded="false" aria-controls="drawer">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div class="shn-drawer cv:hidden" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+      <nav class="flex flex-col items-center justify-center gap-8 h-full">
+        <a href="#dienstleistungen">Dienstleistungen</a>
+        <a href="#ablauf">So funktioniert es</a>
+        <a href="#integrationen">Integrationen</a>
+        <a href="#ueber-uns">Über uns</a>
+      </nav>
+    </div>
+
+    <main id="main">
+      <span id="top"></span>
+
+      <!-- ======================================================================
+           HERO
+           ====================================================================== -->
+      <section class="shn-hero">
+        <img src="assets/images/hero-warehouse.jpg" alt="" class="shn-hero__bg" width="1920" height="939" fetchpriority="high" />
+        <div class="shn-container text-center">
+          <p class="shn-eyebrow text-[16px] lg:text-[18px]">Fulfillment-Dienstleister</p>
+          <h1 class="shn-hero__title">
+            Fulfillment, das Ihr<br />E-Commerce Wachstum<br />vorantreibt
+          </h1>
+          <div class="mt-8 lg:mt-[40px]">
+            <a href="#kontakt" class="shn-btn h-10 min-w-[113px] px-5 text-[16px]">Los geht’s</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           WELCOME + PROCESS DIAGRAM
+           ====================================================================== -->
+      <section id="ueber-uns" class="pt-16 lg:pt-[150px]">
+        <div class="shn-container reveal">
+          <p class="shn-eyebrow">Willkommen</p>
+          <h2 class="shn-h2">bei KITOAN Fulfillment-Guide!</h2>
+          <p class="shn-lead mt-4 max-w-[821px]">
+            Von der sicheren Verpackung bis zur zuverlässigen Zustellung sorgen wir dafür, dass jedes Paket
+            mit der Sorgfalt und Aufmerksamkeit behandelt wird, die es verdient – damit Ihre Waren sicher,
+            unversehrt und pünktlich bei Ihnen ankommen.
+          </p>
+        </div>
+
+        <!-- ---- wide screens: pixel-accurate canvas ---- -->
+        <div class="canvas-wrap shn-container--wide mt-8 cv:-mt-3 reveal">
+          <div class="canvas" style="--cw:1548; --ch:692;">
+
+            <div class="pin" style="--x:70;  --y:314; --w:307; --h:205;"><img src="assets/images/online-shop.png" alt="Online-Shop mit Warenkorb und Produkten" /></div>
+            <div class="pin" style="--x:637; --y:129; --w:797; --h:498;"><img src="assets/images/warehouse-building.png" alt="SHN Germany Logistikzentrum" /></div>
+
+            <div class="pin c-glass" style="--x:0;   --y:253; --w:159; --h:97;"></div>
+            <div class="pin c-label" style="--x:21;  --y:282; --w:118; --h:39;">Verkaufaen</div>
+            <div class="pin c-glass" style="--x:301; --y:295; --w:159; --h:91;"></div>
+            <div class="pin c-label" style="--x:322; --y:321; --w:118; --h:39;">Verdienen</div>
+
+            <div class="pin" style="--x:442; --y:435; --w:166.5; --h:31.2;"><svg viewBox="0 0 168.914 31.8944" class="w-full h-full"><use href="#i-flow-arrows"/></svg></div>
+            <div class="pin c-label c-title" style="--x:425; --y:487; --w:200; --h:40;">wir kümmern uns<br />um den Rest!</div>
+            <div class="pin c-label c-title" style="--x:123.5; --y:539; --w:200; --h:20;">ONLINE-SHOP</div>
+
+            <!-- badge: Einrichtung -->
+            <div class="pin c-glass" style="--x:1188; --y:0;   --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:1234; --y:26;  --w:79;  --h:68;"><img src="assets/images/icon-setup.png" alt="" /></div>
+            <div class="pin c-label" style="--x:1219; --y:108; --w:110; --h:39;">Einrichtung</div>
+            <!-- badge: Anlieferung -->
+            <div class="pin c-glass" style="--x:876; --y:43;  --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:922; --y:69;  --w:79;  --h:68;"><img src="assets/images/icon-delivery-in.png" alt="" /></div>
+            <div class="pin c-label" style="--x:907; --y:151; --w:110; --h:39;">Anlieferung</div>
+            <!-- badge: Wareneingang -->
+            <div class="pin c-glass" style="--x:602; --y:152; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:648; --y:178; --w:79;  --h:68;"><img src="assets/images/icon-goods-receipt.png" alt="" /></div>
+            <div class="pin c-label" style="--x:627; --y:260; --w:122; --h:39;">Wareneingang</div>
+            <!-- badge: Lagerung -->
+            <div class="pin c-glass" style="--x:1377; --y:235; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:1423; --y:261; --w:79;  --h:68;"><img src="assets/images/icon-storage.png" alt="" /></div>
+            <div class="pin c-label" style="--x:1388; --y:343; --w:150; --h:39;">Lagerung/Bestandsführung</div>
+            <!-- badge: Kommissionieren -->
+            <div class="pin c-glass" style="--x:1228; --y:517; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:1274; --y:548; --w:79;  --h:57;"><img src="assets/images/icon-picking.png" alt="" /></div>
+            <div class="pin c-label" style="--x:1239; --y:625; --w:150; --h:39;">Kommissionieren/Verpacken</div>
+            <!-- badge: Versand -->
+            <div class="pin c-glass" style="--x:917; --y:487; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:963; --y:515; --w:79;  --h:66;"><img src="assets/images/icon-shipping.png" alt="" /></div>
+            <div class="pin c-label" style="--x:928; --y:595; --w:150; --h:39;">Versand</div>
+            <!-- badge: Retoure -->
+            <div class="pin c-glass" style="--x:627; --y:519; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:673; --y:562; --w:79;  --h:51;"><img src="assets/images/icon-returns.png" alt="" /></div>
+            <div class="pin c-label" style="--x:638; --y:627; --w:150; --h:39;">Retoure</div>
+
+          </div>
+        </div>
+
+        <!-- ---- narrow screens: stacked ---- -->
+        <div class="stack-wrap shn-container mt-10">
+          <div class="grid gap-8 sm:grid-cols-2 items-center reveal">
+            <img src="assets/images/online-shop.png" alt="Online-Shop mit Warenkorb und Produkten" class="w-full max-w-[380px] mx-auto" />
+            <div class="flex flex-col items-center gap-4 text-center">
+              <div class="flex flex-wrap justify-center gap-3">
+                <span class="shn-glass px-5 py-3 font-sora text-[15px]">Verkaufaen</span>
+                <span class="shn-glass px-5 py-3 font-sora text-[15px]">Verdienen</span>
+              </div>
+              <svg viewBox="0 0 168.914 31.8944" class="w-[150px] h-auto"><use href="#i-flow-arrows"/></svg>
+              <p class="font-sora font-semibold uppercase text-[16px] leading-5 m-0">wir kümmern uns<br />um den Rest!</p>
+            </div>
+          </div>
+
+          <img src="assets/images/warehouse-building.png" alt="SHN Germany Logistikzentrum" class="w-full mt-8 reveal" />
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 reveal">
+            <div class="shn-badge"><img src="assets/images/icon-setup.png" alt="" /><span>Einrichtung</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-delivery-in.png" alt="" /><span>Anlieferung</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-goods-receipt.png" alt="" /><span>Wareneingang</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-storage.png" alt="" /><span>Lagerung/Bestandsführung</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-picking.png" alt="" /><span>Kommissionieren/Verpacken</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-shipping.png" alt="" /><span>Versand</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-returns.png" alt="" /><span>Retoure</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           INTEGRATIONS
+           ====================================================================== -->
+      <section id="integrationen" class="pt-20 lg:pt-[154px]">
+        <div class="shn-container text-center reveal">
+          <p class="shn-eyebrow">Nahtlose Integrationen</p>
+          <h2 class="shn-h2">Intelligentere Auftragsabwicklung.</h2>
+          <p class="shn-lead mt-4 max-w-[789px] mx-auto">
+            Vernetzen Sie Ihr digitales Ökosystem mit den Tools, die Sie bereits nutzen. Aventus integriert
+            Ihre E-Commerce-Plattform, Ihre Shopsysteme und wichtige Geschäftstools zu einer nahtlosen und
+            effizienten Lösung.
+          </p>
+          <p class="font-sora text-[20px] lg:text-[24px] leading-6 text-ink mt-12 lg:mt-[77px]">zusätzlicher Platzhalter</p>
+        </div>
+
+        <div class="shn-container mt-8 lg:mt-[30px] reveal">
+          <div class="grid grid-cols-2 sm:grid-cols-3 cv:grid-cols-6 gap-5">
+            <div class="shn-integration"><svg viewBox="0 0 100 73" class="!h-[52px] cv:!h-[73px] !w-auto"><use href="#i-jtl"/></svg><span class="shn-integration__name">JTL</span></div>
+            <div class="shn-integration"><svg viewBox="0 0 73 73"><use href="#i-shopware"/></svg><span class="shn-integration__name">SHOPWARE</span></div>
+            <div class="shn-integration"><svg viewBox="0 0 68.3853 73.2881"><use href="#i-shopify"/></svg><span class="shn-integration__name">SHOPIFY</span></div>
+            <div class="shn-integration"><svg viewBox="0 0 122 73" class="!h-[52px] cv:!h-[73px] !w-auto"><use href="#i-woocommerce"/></svg><span class="shn-integration__name">WOOCOMMERS</span></div>
+
+            <div class="shn-integration shn-integration--empty" role="button" tabindex="0" aria-label="Weitere Integration hinzufügen">
+              <div class="dash"><svg viewBox="0 0 26.872 27" class="w-[27px] h-[27px]" aria-hidden="true"><line x1="13.94" x2="13.94" y1="0" y2="27" stroke="#000" stroke-width="2"/><line x1="0" x2="26.872" y1="13" y2="13" stroke="#000" stroke-width="2"/></svg></div>
+            </div>
+            <div class="shn-integration shn-integration--empty" role="button" tabindex="0" aria-label="Weitere Integration hinzufügen">
+              <div class="dash"><svg viewBox="0 0 26.872 27" class="w-[27px] h-[27px]" aria-hidden="true"><line x1="13.94" x2="13.94" y1="0" y2="27" stroke="#000" stroke-width="2"/><line x1="0" x2="26.872" y1="13" y2="13" stroke="#000" stroke-width="2"/></svg></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           SERVICES (grey band + road)
+           ====================================================================== -->
+      <section id="dienstleistungen" class="relative mt-16 lg:mt-[160px]">
+        <div class="bg-surface pt-14 lg:pt-20 pb-16 lg:pb-[248px]">
+          <div class="shn-container reveal">
+            <p class="shn-eyebrow">Alles, was Ihr Unternehmen</p>
+            <p class="shn-kicker">für das Wachstum braucht</p>
+          </div>
+
+          <div class="shn-container mt-8 lg:mt-[40px] relative z-10 reveal">
+            <div class="grid gap-5 sm:grid-cols-2 cv:grid-cols-4">
+              <article class="shn-service">
+                <div class="shn-service__media"><img src="assets/images/card-warehousing.png" alt="Lagerhalle mit Paketen" loading="lazy" /></div>
+                <h3 class="shn-service__title">Lagerhaltung</h3>
+                <p class="shn-service__text">Sichere Lagerung des Lagerbestands mit Bestandsverwaltung in Echtzeit.</p>
+              </article>
+              <article class="shn-service">
+                <div class="shn-service__media"><img src="assets/images/card-inventory.png" alt="Bestandsverwaltung mit Berichten" loading="lazy" /></div>
+                <h3 class="shn-service__title">Bestandsmanagement</h3>
+                <p class="shn-service__text">Überwachen Sie die Lagerbestände mithilfe präziser Berichte.</p>
+              </article>
+              <article class="shn-service">
+                <div class="shn-service__media"><img src="assets/images/card-returns.png" alt="Retourenabwicklung" loading="lazy" /></div>
+                <h3 class="shn-service__title">Retourenmanagement</h3>
+                <p class="shn-service__text">Effiziente Abwicklung von Rücksendungen und Qualitätskontrollen.</p>
+              </article>
+              <article class="shn-service">
+                <div class="shn-service__media"><img src="assets/images/card-integration.png" alt="Shop-Integrationen" loading="lazy" /></div>
+                <h3 class="shn-service__title">Integration in den Shop</h3>
+                <p class="shn-service__text">Verbinden Sie Shopify, WooCommerce, Amazon und weitere Plattformen.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/images/road.png" alt="" loading="lazy"
+             class="shn-road absolute left-0 right-0 bottom-0 translate-y-[32.5%] z-0" />
+      </section>
+
+      <!-- ======================================================================
+           PROCESS / TIMELINE
+           ====================================================================== -->
+      <section id="ablauf" class="pt-[110px] lg:pt-[274px]">
+        <div class="shn-container--flow text-center reveal">
+          <p class="shn-eyebrow">So funktioniert es</p>
+          <p class="shn-kicker mt-0">Einfacher Ablauf, reibungslose Abwicklung</p>
+          <p class="shn-lead mt-3 text-muted2">Vom Lagerbestand bis zur Auslieferung kümmern wir uns um alles, was dazwischen liegt.</p>
+        </div>
+
+        <!-- Desktop rail -->
+        <div class="hidden lg:block shn-container--flow mt-[40px] reveal">
+          <div class="shn-flow">
+            <div class="shn-flow__panel"></div>
+
+            <!-- 01 -->
+            <div class="shn-flow__icon" style="left:276px; top:19px;  width:99px;  height:90px;"><img src="assets/images/step-1-inventory.png" alt="" loading="lazy" /></div>
+            <div class="shn-flow__rail is-first" style="top:64px;"></div>
+            <div class="shn-flow__num is-first" style="top:44px;">01</div>
+            <div class="fp" style="left:527px; top:33px; width:241px;">
+              <p class="shn-flow__title text-white">Bestandsliste senden</p>
+              <p class="shn-flow__text shn-flow-step__text">You send your products to our warehouse.</p>
+            </div>
+
+            <!-- 02 -->
+            <div class="shn-flow__icon" style="left:526px; top:183px; width:115px; height:90px;"><img src="assets/images/step-2-shop.png" alt="" loading="lazy" /></div>
+            <div class="shn-flow__rail" style="top:227px;"></div>
+            <div class="shn-flow__num" style="top:207px;">02</div>
+            <div class="fp text-right" style="left:147px; top:198px; width:224px;">
+              <p class="shn-flow-step__title">Produktshop</p>
+              <p class="shn-flow-step__text">Wir nehmen Ihre Waren entgegen und lagern sie sicher.</p>
+            </div>
+
+            <!-- 03 -->
+            <div class="shn-flow__icon" style="left:276px; top:346px; width:99px;  height:90px;"><img src="assets/images/step-3-order.png" alt="" loading="lazy" /></div>
+            <div class="shn-flow__rail" style="top:390px;"></div>
+            <div class="shn-flow__num" style="top:370px;">03</div>
+            <div class="fp" style="left:534px; top:361px; width:264px;">
+              <p class="shn-flow-step__title">Der Kunde gibt Bestellungen auf</p>
+              <p class="shn-flow-step__text">Ihr Kunde gibt in Ihrem Shop eine Bestellung auf.</p>
+            </div>
+
+            <!-- 04 -->
+            <div class="shn-flow__icon" style="left:534px; top:508px; width:99px;  height:90px;"><img src="assets/images/step-4-packing.png" alt="" loading="lazy" /></div>
+            <div class="shn-flow__rail" style="top:553px;"></div>
+            <div class="shn-flow__num" style="top:533px;">04</div>
+            <div class="fp text-right" style="left:111px; top:524px; width:260px;">
+              <p class="shn-flow-step__title">Verpackung und Versand</p>
+              <p class="shn-flow-step__text">Wir kommissionieren, verpacken und versenden die Bestellung umgehend.</p>
+            </div>
+
+            <!-- 05 -->
+            <div class="shn-flow__icon" style="left:276px; top:672px; width:99px;  height:90px;"><img src="assets/images/step-5-delivered.png" alt="" loading="lazy" /></div>
+            <div class="shn-flow__num" style="top:696px;">05</div>
+            <div class="fp" style="left:531px; top:687px; width:264px;">
+              <p class="shn-flow-step__title">Bestellung geliefert</p>
+              <p class="shn-flow-step__text">Ihr Kunde erhält die Bestellungen pünktlich.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile / tablet list -->
+        <ol class="lg:hidden shn-container--flow mt-10 list-none p-0 m-0 mx-auto space-y-5">
+          <li class="shn-flow-step is-first flex gap-4 items-center rounded-[20px] bg-black/90 p-5 reveal">
+            <img src="assets/images/step-1-inventory.png" alt="" class="w-[72px] h-[66px] object-contain flex-none" loading="lazy" />
+            <div class="shn-flow-step__num">01</div>
+            <div><p class="shn-flow-step__title">Bestandsliste senden</p><p class="shn-flow-step__text">You send your products to our warehouse.</p></div>
+          </li>
+          <li class="shn-flow-step flex gap-4 items-center rounded-[20px] bg-surface p-5 reveal">
+            <img src="assets/images/step-2-shop.png" alt="" class="w-[72px] h-[66px] object-contain flex-none" loading="lazy" />
+            <div class="shn-flow-step__num !bg-white">02</div>
+            <div><p class="shn-flow-step__title">Produktshop</p><p class="shn-flow-step__text">Wir nehmen Ihre Waren entgegen und lagern sie sicher.</p></div>
+          </li>
+          <li class="shn-flow-step flex gap-4 items-center rounded-[20px] bg-surface p-5 reveal">
+            <img src="assets/images/step-3-order.png" alt="" class="w-[72px] h-[66px] object-contain flex-none" loading="lazy" />
+            <div class="shn-flow-step__num !bg-white">03</div>
+            <div><p class="shn-flow-step__title">Der Kunde gibt Bestellungen auf</p><p class="shn-flow-step__text">Ihr Kunde gibt in Ihrem Shop eine Bestellung auf.</p></div>
+          </li>
+          <li class="shn-flow-step flex gap-4 items-center rounded-[20px] bg-surface p-5 reveal">
+            <img src="assets/images/step-4-packing.png" alt="" class="w-[72px] h-[66px] object-contain flex-none" loading="lazy" />
+            <div class="shn-flow-step__num !bg-white">04</div>
+            <div><p class="shn-flow-step__title">Verpackung und Versand</p><p class="shn-flow-step__text">Wir kommissionieren, verpacken und versenden die Bestellung umgehend.</p></div>
+          </li>
+          <li class="shn-flow-step flex gap-4 items-center rounded-[20px] bg-surface p-5 reveal">
+            <img src="assets/images/step-5-delivered.png" alt="" class="w-[72px] h-[66px] object-contain flex-none" loading="lazy" />
+            <div class="shn-flow-step__num !bg-white">05</div>
+            <div><p class="shn-flow-step__title">Bestellung geliefert</p><p class="shn-flow-step__text">Ihr Kunde erhält die Bestellungen pünktlich.</p></div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ======================================================================
+           WHY CHOOSE US
+           ====================================================================== -->
+      <section class="pt-16 lg:pt-[83px]">
+        <!-- wide: canvas -->
+        <div class="canvas-wrap shn-container--why reveal">
+          <div class="canvas" style="--cw:1536; --ch:1024;">
+            <div class="pin" style="--x:0; --y:0; --w:1536; --h:1024;"><img src="assets/images/warehouse-cutaway.jpg" alt="Querschnitt eines SHN Germany Lagers" loading="lazy" /></div>
+
+            <div class="pin" style="--x:86; --y:129; --w:453;">
+              <p class="shn-eyebrow m-0" style="font-size:calc(14 * var(--u)); line-height:calc(24 * var(--u));">Warum sollten Sie sich für shn germany entscheiden?</p>
+              <p class="shn-kicker" style="font-size:calc(20 * var(--u)); line-height:calc(24 * var(--u));">Zuverlässige Logistik.<br />Hervorragender Service.</p>
+            </div>
+
+            <div class="pin c-glass" style="--x:286; --y:287; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:332; --y:313; --w:79;  --h:68;"><img src="assets/images/icon-secure-storage.png" alt="" loading="lazy" /></div>
+            <div class="pin c-label" style="--x:317; --y:395; --w:110; --h:39;">Sichere Lagerung</div>
+
+            <div class="pin c-glass" style="--x:744; --y:172; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:790; --y:198; --w:79;  --h:68;"><img src="assets/images/icon-fair-pricing.png" alt="" loading="lazy" /></div>
+            <div class="pin c-label" style="--x:775; --y:280; --w:110; --h:39;">Günstige Preise</div>
+
+            <div class="pin c-glass" style="--x:161; --y:641; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:207; --y:667; --w:79;  --h:68;"><img src="assets/images/icon-support.png" alt="" loading="lazy" /></div>
+            <div class="pin c-label" style="--x:192; --y:749; --w:110; --h:39;">Engagierter Support</div>
+
+            <div class="pin c-glass" style="--x:1252; --y:556; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:1298; --y:582; --w:79;  --h:68;"><img src="assets/images/icon-realtime-stock.png" alt="" loading="lazy" /></div>
+            <div class="pin c-label" style="--x:1268; --y:664; --w:140; --h:39;">Bestandsübersicht in Echtzeit</div>
+
+            <div class="pin c-glass" style="--x:735; --y:667; --w:171; --h:171;"></div>
+            <div class="pin c-icon"  style="--x:781; --y:693; --w:79;  --h:68;"><img src="assets/images/icon-scalable.png" alt="" loading="lazy" /></div>
+            <div class="pin c-label" style="--x:766; --y:775; --w:110; --h:39;">Skalierbare Lösungen</div>
+          </div>
+        </div>
+
+        <!-- narrow: stacked -->
+        <div class="stack-wrap shn-container">
+          <div class="reveal">
+            <p class="shn-eyebrow">Warum sollten Sie sich für shn germany entscheiden?</p>
+            <p class="shn-kicker">Zuverlässige Logistik.<br />Hervorragender Service.</p>
+          </div>
+          <img src="assets/images/warehouse-cutaway-crop.jpg" alt="Querschnitt eines SHN Germany Lagers" class="w-full mt-6 rounded-[20px] reveal" loading="lazy" />
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8 reveal">
+            <div class="shn-badge"><img src="assets/images/icon-secure-storage.png" alt="" loading="lazy" /><span>Sichere Lagerung</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-fair-pricing.png" alt="" loading="lazy" /><span>Günstige Preise</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-support.png" alt="" loading="lazy" /><span>Engagierter Support</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-realtime-stock.png" alt="" loading="lazy" /><span>Bestandsübersicht in Echtzeit</span></div>
+            <div class="shn-badge"><img src="assets/images/icon-scalable.png" alt="" loading="lazy" /><span>Skalierbare Lösungen</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TESTIMONIALS
+           ====================================================================== -->
+      <section id="bewertungen" class="pt-16 cv:pt-0 cv:-mt-[46px]">
+        <div class="shn-container reveal">
+          <p class="shn-eyebrow">Wachsende E-Commerce-Marken</p>
+          <p class="shn-kicker">vertrauen auf uns</p>
+        </div>
+
+        <div class="shn-container mt-8 lg:mt-[20px] reveal">
+          <div class="grid gap-5 md:grid-cols-2 cv:grid-cols-3">
+
+            <figure class="shn-testimonial m-0">
+              <figcaption>
+                <p class="shn-testimonial__name">Emily R.</p>
+                <p class="shn-testimonial__meta">Detached House • Manchester, UK</p>
+                <div class="shn-stars" role="img" aria-label="5 von 5 Sternen">
+                  <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+                </div>
+              </figcaption>
+              <blockquote class="shn-testimonial__body m-0">Die Zusammenarbeit mit SHN Germany hat unseren Fulfillment-Prozess vollständig optimiert. Bestellungen werden schnell kommissioniert, verpackt und versendet, der Lagerbestand ist stets korrekt.</blockquote>
+            </figure>
+
+            <figure class="shn-testimonial m-0">
+              <figcaption>
+                <p class="shn-testimonial__name">James T.</p>
+                <p class="shn-testimonial__meta">Apartment • Bristol, UK</p>
+                <div class="shn-stars" role="img" aria-label="5 von 5 Sternen">
+                  <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+                </div>
+              </figcaption>
+              <blockquote class="shn-testimonial__body m-0">Seit wir mit SHN Germany zusammenarbeiten, können wir uns ganz auf das Wachstum unseres Unternehmens konzentrieren, anstatt uns um die Logistik kümmern zu müssen.</blockquote>
+            </figure>
+
+            <figure class="shn-testimonial m-0 md:col-span-2 cv:col-span-1">
+              <figcaption>
+                <p class="shn-testimonial__name">Sophie L.</p>
+                <p class="shn-testimonial__meta">Modern Family Home • London, UK</p>
+                <div class="shn-stars" role="img" aria-label="5 von 5 Sternen">
+                  <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+                </div>
+              </figcaption>
+              <blockquote class="shn-testimonial__body m-0">SHN Germany hat unsere Erwartungen in jeder Hinsicht übertroffen. Von der sicheren Lagerung über die nahtlose Integration in den Shop bis hin zur präzisen Auftragsabwicklung und dem zuverlässigen.</blockquote>
+            </figure>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           CTA
+           ====================================================================== -->
+      <section id="kontakt" class="pt-16 lg:pt-[140px] pb-16 lg:pb-[140px]">
+        <div class="shn-container--cta shn-cta reveal">
+          <img src="assets/images/cta-boxes.jpg" alt="" class="shn-cta__bg" loading="lazy" />
+          <div class="shn-cta__inner">
+            <div>
+              <p class="shn-eyebrow text-[14px] lg:text-[16px]">Sind Sie bereit,</p>
+              <p class="shn-cta__title">Ihr Unternehmen<br />zu vergrößern?</p>
+            </div>
+            <a href="mailto:info@name.de" class="shn-btn px-4 py-[10px] text-[14px] font-medium uppercase">Angebot anfordern</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ======================================================================
+         FOOTER
+         ====================================================================== -->
+    <footer class="shn-footer pt-14 lg:pt-[77px] pb-5 lg:pb-[27px]">
+      <div class="shn-container">
+        <div class="shn-footer__grid">
+
+          <div>
+            <img src="assets/images/logo.png" alt="SHN Germany" class="w-[82px] h-[45px] object-contain" loading="lazy" />
+            <p class="shn-footer__text mt-[10px] !leading-5 max-w-[441px]">Zuverlässige Fulfillment- und Logistiklösungen für E-Commerce-Unternehmen. Wir lagern, verpacken und versenden Ihre Produkte schnell, präzise und sorgfältig – damit Sie sich ganz auf das Wachstum Ihrer Marke konzentrieren können.</p>
+
+            <p class="shn-footer__heading mt-[34px]">Soziale Medien</p>
+            <div class="shn-footer__social flex gap-3">
+              <a href="#" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+              <a href="#" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+              <a href="#" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+              <a href="#" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+            </div>
+          </div>
+
+          <nav aria-labelledby="f-quick">
+            <p class="shn-footer__heading" id="f-quick">Schnellzugriff</p>
+            <ul class="shn-footer__list">
+              <li><a href="#top">Startseite</a></li>
+              <li><a href="#ueber-uns">Über uns</a></li>
+              <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+              <li><a href="#ablauf">So funktioniert es</a></li>
+              <li><a href="#integrationen">Integrationen</a></li>
+              <li><a href="#bewertungen">Bewertungen</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-labelledby="f-serv">
+            <p class="shn-footer__heading" id="f-serv">Dienstleistungen</p>
+            <ul class="shn-footer__list">
+              <li><a href="#dienstleistungen">Warehousing</a></li>
+              <li><a href="#dienstleistungen">Order Fulfillment</a></li>
+              <li><a href="#dienstleistungen">Worldwide Shipping</a></li>
+              <li><a href="#dienstleistungen">Inventory Management</a></li>
+              <li><a href="#dienstleistungen">Returns Management</a></li>
+              <li><a href="#dienstleistungen">Store Integration</a></li>
+            </ul>
+          </nav>
+
+          <div class="shn-footer__contact">
+            <p class="shn-footer__text"><span class="text-white">Adresse:</span> Deutschland</p>
+            <p class="shn-footer__text"><span class="text-white">Telefon:</span> <a href="tel:+4915123456789" class="hover:text-white transition-colors">+49 151 23456789</a></p>
+            <p class="shn-footer__text"><span class="text-white">E-Mail:</span> <a href="mailto:info@name.de" class="hover:text-white transition-colors">info@name.de</a></p>
+            <p class="shn-footer__text mt-7 !text-white">Öffnungszeiten</p>
+            <p class="shn-footer__text">Montag – Freitag</p>
+            <p class="shn-footer__text">09:00 – 18:00 Uhr (MEZ)Adresse</p>
+            <p class="shn-footer__text">Deutschland</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="border-t border-white/20 mt-10 lg:mt-[20px] pt-5">
+        <div class="shn-container flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+          <p class="text-[14px] leading-5 text-white uppercase m-0">© 2026 Name. Alle Rechte vorbehalten.</p>
+          <p class="text-[14px] leading-5 text-white uppercase m-0 md:text-right">
+            <a href="#" class="hover:text-brand transition-colors">Datenschutzerklärung</a> •
+            <a href="#" class="hover:text-brand transition-colors">Allgemeine Geschäftsbedingungen</a> •
+            <a href="#" class="hover:text-brand transition-colors">Cookie-Richtlinie</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <button type="button" class="shn-top" id="backToTop" aria-label="Nach oben scrollen">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
